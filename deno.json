@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-env --watch server.ts",
+    "sass": "deno run -A npm:sass --no-source-map scss:css",
+    "sass:watch": "deno run -A npm:sass --no-source-map -w scss:css"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "handlebars": "npm:handlebars@^4.7.8"
+  }
+}
