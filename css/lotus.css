@@ -1,35 +1,46 @@
-/* Sakura.css v1.5.0
- * ================
- * Minimal css theme.
- * Project: https://github.com/oxalorg/sakura/
- */
-/* Body */
-html {
-  font-size: 62.5%;
+@import "../node_modules/normalize.css/normalize.css";
+.lotus-wrap {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-}
-
-body {
-  font-size: 1.8rem;
-  line-height: 1.618;
-  max-width: 38em;
-  margin: auto;
+  font-size: 1rem;
   color: #4a4a4a;
-  background-color: #f9f9f9;
-  padding: 13px;
+  /* Pre and Code */
+  /* Tables */
+  /* Buttons, forms and input */
 }
-
 @media (max-width: 684px) {
-  body {
-    font-size: 1.53rem;
+  .lotus-wrap {
+    font-size: 0.85rem;
   }
 }
 @media (max-width: 382px) {
-  body {
-    font-size: 1.35rem;
+  .lotus-wrap {
+    font-size: 0.75rem;
   }
 }
-h1, h2, h3, h4, h5, h6 {
+.lotus-wrap.content {
+  max-width: 1023px;
+}
+.lotus-wrap.content.small-size {
+  max-width: 768px;
+}
+.lotus-wrap.content.large-size {
+  max-width: 1215px;
+}
+.lotus-wrap.content.xlarge-size {
+  max-width: 1407px;
+}
+.lotus-wrap.content.xxlarge-size {
+  max-width: 100%;
+}
+.lotus-wrap.mx-auto {
+  margin: 0 auto;
+}
+.lotus-wrap h1,
+.lotus-wrap h2,
+.lotus-wrap h3,
+.lotus-wrap h4,
+.lotus-wrap h5,
+.lotus-wrap h6 {
   line-height: 1.1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-weight: 700;
@@ -40,67 +51,56 @@ h1, h2, h3, h4, h5, h6 {
   -ms-word-break: break-all;
   word-break: break-word;
 }
-
-h1 {
+.lotus-wrap h1 {
   font-size: 2.35em;
 }
-
-h2 {
+.lotus-wrap h2 {
   font-size: 2em;
 }
-
-h3 {
+.lotus-wrap h3 {
   font-size: 1.75em;
 }
-
-h4 {
+.lotus-wrap h4 {
   font-size: 1.5em;
 }
-
-h5 {
+.lotus-wrap h5 {
   font-size: 1.25em;
 }
-
-h6 {
+.lotus-wrap h6 {
   font-size: 1em;
 }
-
-p {
+.lotus-wrap p {
   margin-top: 0px;
   margin-bottom: 2.5rem;
 }
-
-small, sub, sup {
+.lotus-wrap small,
+.lotus-wrap sub,
+.lotus-wrap sup {
   font-size: 75%;
 }
-
-hr {
+.lotus-wrap hr {
   border-color: #1d7484;
 }
-
-a {
+.lotus-wrap a {
   text-decoration: none;
   color: #1d7484;
 }
-a:visited {
+.lotus-wrap a:visited {
   color: #144f5a;
 }
-a:hover {
+.lotus-wrap a:hover {
   color: #982c61;
   border-bottom: 2px solid #4a4a4a;
 }
-
-ul {
+.lotus-wrap ul {
   padding-left: 1.4em;
   margin-top: 0px;
   margin-bottom: 2.5rem;
 }
-
-li {
+.lotus-wrap li {
   margin-bottom: 0.4em;
 }
-
-blockquote {
+.lotus-wrap blockquote {
   margin-left: 0px;
   margin-right: 0px;
   padding-left: 1em;
@@ -111,20 +111,17 @@ blockquote {
   margin-bottom: 2.5rem;
   background-color: #f1f1f1;
 }
-
-blockquote p {
+.lotus-wrap blockquote p {
   margin-bottom: 0;
 }
-
-img, video {
+.lotus-wrap img,
+.lotus-wrap video {
   height: auto;
   max-width: 100%;
   margin-top: 0px;
   margin-bottom: 2.5rem;
 }
-
-/* Pre and Code */
-pre {
+.lotus-wrap pre {
   background-color: #f1f1f1;
   display: block;
   padding: 1em;
@@ -133,47 +130,48 @@ pre {
   margin-bottom: 2.5rem;
   font-size: 0.9em;
 }
-
-code, kbd, samp {
+.lotus-wrap code,
+.lotus-wrap kbd,
+.lotus-wrap samp {
   font-size: 0.9em;
   padding: 0 0.5em;
   background-color: #f1f1f1;
   white-space: pre-wrap;
 }
-
-pre > code {
+.lotus-wrap pre > code {
   padding: 0;
   background-color: transparent;
   white-space: pre;
   font-size: 1em;
 }
-
-/* Tables */
-table {
+.lotus-wrap table {
   text-align: justify;
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2rem;
 }
-
-td, th {
+.lotus-wrap td,
+.lotus-wrap th {
   padding: 0.5em;
   border-bottom: 1px solid #f1f1f1;
 }
-
-/* Buttons, forms and input */
-input, textarea {
+.lotus-wrap input,
+.lotus-wrap textarea {
   border: 1px solid #4a4a4a;
 }
-input:focus, textarea:focus {
+.lotus-wrap input:focus,
+.lotus-wrap textarea:focus {
   border: 1px solid #1d7484;
 }
-
-textarea {
+.lotus-wrap textarea {
   width: 100%;
 }
-
-.button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
+.lotus-wrap .button,
+.lotus-wrap button,
+.lotus-wrap input[type=submit],
+.lotus-wrap input[type=reset],
+.lotus-wrap input[type=button],
+.lotus-wrap input[type=file]::file-selector-button {
   display: inline-block;
   padding: 5px 10px;
   text-align: center;
@@ -186,23 +184,40 @@ textarea {
   cursor: pointer;
   box-sizing: border-box;
 }
-.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=file]::file-selector-button[disabled] {
+.lotus-wrap .button[disabled],
+.lotus-wrap button[disabled],
+.lotus-wrap input[type=submit][disabled],
+.lotus-wrap input[type=reset][disabled],
+.lotus-wrap input[type=button][disabled],
+.lotus-wrap input[type=file]::file-selector-button[disabled] {
   cursor: default;
   opacity: 0.5;
 }
-.button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
+.lotus-wrap .button:hover,
+.lotus-wrap button:hover,
+.lotus-wrap input[type=submit]:hover,
+.lotus-wrap input[type=reset]:hover,
+.lotus-wrap input[type=button]:hover,
+.lotus-wrap input[type=file]::file-selector-button:hover {
   background-color: #982c61;
   color: #f9f9f9;
   outline: 0;
 }
-.button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]::file-selector-button:focus-visible {
+.lotus-wrap .button:focus-visible,
+.lotus-wrap button:focus-visible,
+.lotus-wrap input[type=submit]:focus-visible,
+.lotus-wrap input[type=reset]:focus-visible,
+.lotus-wrap input[type=button]:focus-visible,
+.lotus-wrap input[type=file]::file-selector-button:focus-visible {
   outline-style: solid;
   outline-width: 2px;
 }
-
-textarea, select, input {
+.lotus-wrap textarea,
+.lotus-wrap select,
+.lotus-wrap input {
   color: #4a4a4a;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
   background-color: #f1f1f1;
   border: 1px solid #f1f1f1;
@@ -210,16 +225,18 @@ textarea, select, input {
   box-shadow: none;
   box-sizing: border-box;
 }
-textarea:focus, select:focus, input:focus {
+.lotus-wrap textarea:focus,
+.lotus-wrap select:focus,
+.lotus-wrap input:focus {
   border: 1px solid #1d7484;
   outline: 0;
 }
-
-input[type=checkbox]:focus {
+.lotus-wrap input[type=checkbox]:focus {
   outline: 1px dotted #1d7484;
 }
-
-label, legend, fieldset {
+.lotus-wrap label,
+.lotus-wrap legend,
+.lotus-wrap fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
