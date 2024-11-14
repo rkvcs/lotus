@@ -1,7 +1,184 @@
-@import "../node_modules/normalize.css/normalize.css";
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
 .lotus-wrap {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 14px;
   color: #4a4a4a;
   padding: 13px;
   /* Pre and Code */
@@ -10,12 +187,12 @@
 }
 @media (max-width: 684px) {
   .lotus-wrap {
-    font-size: 0.85rem;
+    font-size: 11.9px;
   }
 }
 @media (max-width: 382px) {
   .lotus-wrap {
-    font-size: 0.75rem;
+    font-size: 10.5px;
   }
 }
 .lotus-wrap.content {
@@ -45,8 +222,7 @@
   line-height: 1.1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin: 1rem 0;
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
@@ -72,7 +248,7 @@
 }
 .lotus-wrap p {
   margin-top: 0px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 .lotus-wrap small,
 .lotus-wrap sub,
@@ -95,8 +271,7 @@
 }
 .lotus-wrap ul {
   padding-left: 1.4em;
-  margin-top: 0px;
-  margin-bottom: 2.5rem;
+  margin: 0;
 }
 .lotus-wrap li {
   margin-bottom: 0.4em;
@@ -150,19 +325,19 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
 }
-.lotus-wrap td,
-.lotus-wrap th {
-  padding: 0.5em;
+.lotus-wrap table thead, .lotus-wrap table tfoot {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+.lotus-wrap table td,
+.lotus-wrap table th {
+  padding: 0.8rem 0.5em;
   border-bottom: 1px solid #f1f1f1;
 }
-.lotus-wrap input,
-.lotus-wrap textarea {
-  border: 1px solid #4a4a4a;
-}
-.lotus-wrap input:focus,
-.lotus-wrap textarea:focus {
-  border: 1px solid #1d7484;
+.lotus-wrap table caption {
+  padding: 0.5rem 0;
 }
 .lotus-wrap textarea {
   width: 100%;
@@ -174,14 +349,14 @@
 .lotus-wrap input[type=button],
 .lotus-wrap input[type=file]::file-selector-button {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   background-color: #1d7484;
-  color: #f9f9f9;
-  border-radius: 1px;
-  border: 1px solid #1d7484;
+  color: #f1f1f1;
+  border-radius: 0.3rem;
+  border: none;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -201,7 +376,7 @@
 .lotus-wrap input[type=button]:hover,
 .lotus-wrap input[type=file]::file-selector-button:hover {
   background-color: #982c61;
-  color: #f9f9f9;
+  color: #f1f1f1;
   outline: 0;
 }
 .lotus-wrap .button:focus-visible,
@@ -213,16 +388,23 @@
   outline-style: solid;
   outline-width: 2px;
 }
+.lotus-wrap .button.full-width,
+.lotus-wrap button.full-width,
+.lotus-wrap input[type=submit].full-width,
+.lotus-wrap input[type=reset].full-width,
+.lotus-wrap input[type=button].full-width,
+.lotus-wrap input[type=file]::file-selector-button.full-width {
+  width: 100%;
+}
 .lotus-wrap textarea,
 .lotus-wrap select,
 .lotus-wrap input {
-  color: #4a4a4a;
-  padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
+  color: rgb(17, 24, 39);
+  padding: 10px;
   margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
-  border-radius: 4px;
+  border: 1px solid rgb(229, 231, 235);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.3rem;
   box-shadow: none;
   box-sizing: border-box;
 }
@@ -231,6 +413,11 @@
 .lotus-wrap input:focus {
   border: 1px solid #1d7484;
   outline: 0;
+}
+.lotus-wrap textarea.full-width,
+.lotus-wrap select.full-width,
+.lotus-wrap input.full-width {
+  width: 100%;
 }
 .lotus-wrap input[type=checkbox]:focus {
   outline: 1px dotted #1d7484;
@@ -241,4 +428,12 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+.lotus-wrap fieldset {
+  border: 1px solid rgb(229, 231, 235);
+  padding: 1rem;
+  margin: 1rem;
+}
+.lotus-wrap fieldset legend {
+  color: #a4a1a1;
 }
